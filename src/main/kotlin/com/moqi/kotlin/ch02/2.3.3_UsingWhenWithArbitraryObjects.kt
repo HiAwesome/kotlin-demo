@@ -1,7 +1,6 @@
 package com.moqi.kotlin.ch02
 
 import com.moqi.kotlin.ch02.Color4.*
-import java.lang.Exception
 
 /**
  * 在 when 结构中使用任意对象

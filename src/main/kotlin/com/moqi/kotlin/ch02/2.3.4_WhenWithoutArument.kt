@@ -1,7 +1,6 @@
 package com.moqi.kotlin.ch02
 
 import com.moqi.kotlin.ch02.Color4.*
-import java.lang.Exception
 
 /**
  * 使用不带参数的 when
