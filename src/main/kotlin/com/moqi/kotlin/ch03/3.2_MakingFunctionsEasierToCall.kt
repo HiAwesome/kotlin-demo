@@ -7,9 +7,10 @@ package com.moqi.kotlin.ch03
  */
 fun <T> joinToString(
     collection: Collection<T>,
-    separator: String,
-    prefix: String,
-    postfix: String
+    // 默认参数值
+    separator: String = ", ",
+    prefix: String = "",
+    postfix: String = ""
 ): String {
 
     val result = StringBuilder(prefix)
@@ -31,4 +32,15 @@ fun main() {
     println()
 
     println(joinToString(list, "; ", "(", ")"))
+    println()
+
+    // 命名参数
+    println(joinToString(list, separator = "; ", "(", ")"))
+    println(joinToString(list, separator = "; ", prefix = "(", ")"))
+    println(joinToString(list, separator = "; ", prefix = "(", postfix = ")"))
+    println(joinToString(list, prefix = "(", postfix = ")", separator = "; "))
+    println()
+
+    println(joinToString(list, "; "))
+    println(joinToString(list, separator = "; ", prefix = "# "))
 }
