@@ -26,3 +26,9 @@ class Button1 : View {
     class ButtonState : State
 
 }
+
+class Outer {
+    inner class Inner {
+        fun getOuterReference(): Outer = this@Outer
+    }
+}
