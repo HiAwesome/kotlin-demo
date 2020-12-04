@@ -1,5 +1,7 @@
 package com.moqi.kotlin.ch05.ex1_2_LambdasAndCollections
 
+import com.moqi.kotlin.ch03.joinToString
+
 /**
  * Lambda 表达式和成员引用
  *
@@ -28,5 +30,20 @@ fun main() {
 
     println("people.maxByOrNull { it.age } = ${people.maxByOrNull { it.age }}")
     println("people.maxByOrNull (Person::age) = ${people.maxByOrNull(Person::age)}")
+    println()
+
+    println("people.maxByOrNull { p: Person -> p.age } = ${people.maxByOrNull { p: Person -> p.age }}")
+    println()
+
+    val names = people.joinToString(separator = " ", transform = {p: Person -> p.name})
+    println("names = ${names}")
+    println(people.joinToString(" ") {p: Person -> p.name})
+    println()
+
+    println("people.maxByOrNull { p -> p.age } = ${people.maxByOrNull { p -> p.age }}")
+    println()
+
+    val getAge = {p: Person -> p.age}
+    println("people.maxByOrNull(getAge) = ${people.maxByOrNull(getAge)}")
     println()
 }
