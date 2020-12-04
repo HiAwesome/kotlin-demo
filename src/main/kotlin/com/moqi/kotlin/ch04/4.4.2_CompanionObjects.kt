@@ -15,6 +15,9 @@ class A {
 
 fun getFacebookName(accountId: Int) = "fb:$accountId"
 
+/**
+ * 定义一个拥有多个从构造方法的类
+ */
 class User1 {
     val nickName: String
 
@@ -27,6 +30,9 @@ class User1 {
     }
 }
 
+/**
+ * 使用工厂方法来替代从构造方法
+ */
 class User private constructor(val nickName: String) {
     companion object {
         fun newSubscribingUser(email: String) =
