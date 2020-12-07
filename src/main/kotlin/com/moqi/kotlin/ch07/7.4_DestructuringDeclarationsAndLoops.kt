@@ -20,6 +20,11 @@ fun splitFilename(fullName: String): NameComponents {
     return NameComponents(result[0], result[1])
 }
 
+fun splitFilename2(fullName: String): NameComponents {
+    val (name, ext) = fullName.split('.', limit = 2)
+    return NameComponents(name, ext)
+}
+
 fun main() {
     val map = mapOf("oracle" to "Java", "JetBrains" to "Kotlin")
     printEntries(map)
@@ -32,5 +37,9 @@ fun main() {
 
     val (name, ext) = splitFilename("example.kt")
     println("name = ${name}, ext = ${ext}")
+    println()
+
+    val (name1, ext1) = splitFilename2("example.kt")
+    println("name1 = ${name1}, ext1 = ${ext1}")
     println()
 }
