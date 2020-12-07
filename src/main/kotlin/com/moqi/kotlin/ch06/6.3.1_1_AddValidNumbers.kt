@@ -40,8 +40,19 @@ fun addValidNumbers(numbers: List<Int?>) {
     println("invalidNumbers = ${invalidNumbers}")
 }
 
+fun addValidNumbersFilter(numbers: List<Int?>) {
+    // 对包含可空值的集合使用 filterNotNull
+    val validNumbers = numbers.filterNotNull()
+    println("Sum of valid numbers: ${validNumbers.sum()}")
+    println("Invalid numbers: ${numbers.size - validNumbers.size}")
+}
+
 fun main() {
     val reader = BufferedReader(StringReader("1\nabc\n42"))
     val numbers = readNumbers(reader)
     addValidNumbers(numbers)
+    println()
+
+    addValidNumbersFilter(numbers)
+    println()
 }
