@@ -33,6 +33,4 @@ fun main() {
     println("p.name = ${p.name}")
     println("p.company = ${p.company}")
     println()
-
-
 }
