@@ -1,7 +1,7 @@
 package com.moqi.kotlin.ch08.RemovingDuplicationThroughLambdas
 
 /**
- * 通过 lambda 去除重复代码 V1
+ * 通过 lambda 去除重复代码 V2
  *
  * @author moqi On 12/8/20 17:16
  */
@@ -21,12 +21,11 @@ val log = listOf(
     SiteVisit("/", 16.3, OS.ANDROID)
 )
 
-val averageWindowsDuration = log
-    .filter {it.os == OS.WINDOWS}
-    .map(SiteVisit::duration)
-    .average()
+fun List<SiteVisit>.averageDurationFor(os: OS) =
+    filter { it.os == os }.map(SiteVisit::duration).average()
 
 fun main() {
-    println("averageWindowsDuration = ${averageWindowsDuration}")
+    println("log.averageDurationFor(OS.WINDOWS) = ${log.averageDurationFor(OS.WINDOWS)}")
+    println("log.averageDurationFor(OS.MAC) = ${log.averageDurationFor(OS.MAC)}")
     println()
 }
