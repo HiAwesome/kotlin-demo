@@ -125,6 +125,13 @@
             <version>${kotlin.version}</version>
         </dependency>
 
+        <!-- Kotlin Reflect -->
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-reflect</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+
         <!-- Junit Api -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
