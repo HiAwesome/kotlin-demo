@@ -38,7 +38,7 @@
         <maven-surefire-plugin.version>3.0.0-M4</maven-surefire-plugin.version>
 
         <!-- kotlin -->
-        <kotlin.version>1.4.20</kotlin.version>
+        <kotlin.version>1.4.21</kotlin.version>
     </properties>
 
 
