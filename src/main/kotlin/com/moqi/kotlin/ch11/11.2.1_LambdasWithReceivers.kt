@@ -46,7 +46,7 @@ fun main() {
 
     val map = mutableMapOf(1 to "one")
     map.apply { this[2] = "two" }
-    map.apply { this[3] = "three" }
+    with (map) { this[3] = "three" }
     println("map = ${map}")
     println()
 }
